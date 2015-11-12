@@ -1,0 +1,53 @@
+<h1 class="homeHeader"><span class="underline">O</span>utdoor <span class="underline">Auth</span>ority</h1>
+<br>
+<h2 class="tagLine">Search any location to find local hiking trails and campsites, including images and maps to show the way!</h2>
+<div class="jumboCenter">
+  <div class="jumbotron localSearch">
+    <form ng-submit="trailSearch(city_state_input)">
+      <input type="text" placeholder="Example: Boise, ID" ng-model="city_state_input">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <h1>{{results[0].city}}, {{results[0].state}}</h1>
+    <div class="resultList" ng-repeat="result in results">
+
+      <span data-toggle="modal" data-target="#imageModal"class="glyphicon glyphicon-modal-window modalTrigger">Image</span>
+
+      <div>
+        <span class="">Trail: <a target="_blank" href="{{ result.activities[0].url }}">{{ result.name }}</a></span>
+        <br>
+        <br>
+        <span class="activityType">- Recommended Activity: {{ result.activities[0].activity_type.name }}</span>
+        <br>
+        <span class="distance">- Distance: {{ result.activities[0].length }} miles</span>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- IMAGE MODAL -->
+
+<div id="imageModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ result.name }}</h4>
+      </div>
+      <h1>test!</h1>
+      <div class="modal-body">
+        <img src="{{ result.activities[0].thumnail }}" alt="thumbnail">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- test -->

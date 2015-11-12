@@ -1,0 +1,62 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1443479579455-1860f114bf77?q=80&fm=jpg&s=dc7000360dec6e5368d1ed3e4d0b38ae");
+  background-color: #507196;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.homeHeader {
+  text-align: center;
+  font-size: 800%;
+}
+.underline {
+  text-decoration: underline;
+}
+.currentState {
+  text-align: center;
+  font-size: 400%
+}
+.loginForm {
+  text-align: center;
+}
+.tagLine {
+  text-align: center;
+}
+.indexContainer {
+  width: auto;
+}
+.navbar-brand {
+  text-decoration: underline;
+}
+.localSearch {
+  text-align: center;
+  margin-top: 5%;
+}
+.jumbotron {
+  margin: 0 auto;
+  width: 30%;
+}
+.jumboCenter {
+  margin-top: 2%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.resultList {
+  text-align: left;
+}
+.activityType {
+  margin-left: 5%;
+}
+.distance {
+  margin-left: 5%;
+}
+.modalTrigger {
+  cursor: pointer;
+}
+.left-pull {
+  float: left;
+}
+.right-pull {
+  float: right;
+}
